@@ -1,0 +1,51 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: sans-serif; /* Fuente sin serifas, más limpia */
+    margin: 20px;             /* Espaciado alrededor del contenido */
+    color: #333;              /* Color del texto */
+    background: #f5f5f5;      /* Color de fondo claro */
+}
+
+/* Títulos principales y secundarios */
+h1,
+h2 {
+    color: #222;              /* Color más oscuro para destacar */
+}
+
+/* Imágenes responsivas */
+img {
+    max-width: 100%;          /* Que no se pasen del ancho del contenedor */
+    height: auto;             /* Mantiene la proporción */
+}
+
+/* Estilo para la figura con imagen */
+figure {
+    margin: 20px 0;           /* Espacio arriba y abajo */
+    text-align: center;       /* Centra la imagen y el texto */
+}
+
+/* Espaciado entre párrafos */
+p {
+    margin: 10px 0;
+}
+
+/* Estilo para enlaces */
+a {
+    color: blue;              /* Color azul para destacar el enlace */
+}
+
+/* Estilo general del formulario */
+form {
+    margin-top: 20px;
+}
+
+/* Campos de entrada */
+input {
+    padding: 5px;             /* Espacio interno */
+    margin-right: 10px;       /* Espacio entre el input y el botón */
+}
+
+/* Botón */
+button {
+    padding: 5px 10px;        /* Espacio interno horizontal y vertical */
+}
