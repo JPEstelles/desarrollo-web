@@ -9,7 +9,7 @@ Este repositorio contiene un ejercicio práctico de desarrollo web, donde se ana
 ## 🌐 Enlaces
 
 - 📄 Artículo original:  
-  [¿Cuánto dinero se pierde cada año por el cibercrimen en Estados Unidos? – La Nación](https://www.lanacion.com.ar/tecnologia/cuanto-dinero-se-pierde-cada-ano-por-el-cibercrimen-en-estados-unidos-nid1234567/) <!-- Cambiá el link si es necesario -->
+  [¿Cuánto dinero se pierde cada año por el cibercrimen en Estados Unidos? – La Nación](https://www.lanacion.com.ar/tecnologia/cuanto-dinero-se-pierde-cada-ano-por-el-cibercrimen-en-estados-unidos-nid29042025/) <!-- Cambiá el link si es necesario -->
 
 - 🚀 Página desarrollada:  
   [Ver en GitHub Pages](https://jpestelles.github.io/desarrollo-web/) <!-- Reemplazá con tu URL de GitHub Pages -->
