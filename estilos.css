@@ -2,17 +2,17 @@
 body {
     font-family: sans-serif; /* Fuente sin serifas, más limpia */
     margin: 20px;             /* Espaciado alrededor del contenido */
-    color: #333;              /* Color del texto */
-    background: #f5f5f5;      /* Color de fondo claro */
+    color: #333;              
+    background: #f5f5f5;      
 }
 
 /* Títulos principales y secundarios */
 h1,
 h2 {
-    color: #222;              /* Color más oscuro para destacar */
+    color: #222;              
 }
 
-/* Imágenes responsivas */
+/* Imagenes  */
 img {
     max-width: 100%;          /* Que no se pasen del ancho del contenedor */
     height: auto;             /* Mantiene la proporción */
@@ -24,7 +24,7 @@ figure {
     text-align: center;       /* Centra la imagen y el texto */
 }
 
-/* Espaciado entre párrafos */
+/* Espaciado entre parrafos */
 p {
     margin: 10px 0;
 }
@@ -45,7 +45,33 @@ input {
     margin-right: 10px;       /* Espacio entre el input y el botón */
 }
 
-/* Botón */
+/* Boton */
 button {
     padding: 5px 10px;        /* Espacio interno horizontal y vertical */
 }
+
+
+/* Ajustes mínimos para moviles */
+@media (max-width: 600px) {
+    body {
+      margin: 10px;
+    }
+  
+    img {
+      width: 100%;
+      height: auto;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; /* Espaciado entre input y boton */
+    }
+  
+    input,
+    button {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  
