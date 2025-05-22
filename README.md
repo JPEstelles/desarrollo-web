@@ -1,4 +1,4 @@
-# 💻 Ejercicio de Desarrollo Web - Impacto del Cibercrimen en EE.UU. (2024)
+# 💻 Ejercicio de Desarrollo Web - Impacto del Cibercrimen en EE.UU.
 
 Este repositorio contiene un ejercicio práctico de desarrollo web, donde se analiza el impacto económico del cibercrimen en Estados Unidos durante el año 2024. El contenido está basado en un artículo periodístico publicado en *La Nación*.
 
