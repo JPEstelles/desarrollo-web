@@ -20,4 +20,3 @@ Este repositorio contiene un ejercicio práctico de desarrollo web, donde se ana
 
 - HTML5
 - CSS3
-- JavaScript (opcional)
