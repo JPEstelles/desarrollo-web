@@ -20,7 +20,7 @@ letras del string) guardando el resultado de la suma en una 3er variable (utiliz
 length).
 */
 let str3 = "Javascript";
-let str4 = "lenguaje de programación";
+let str4 = "programacion";
 let suma_length = str3.length + str4.length;
 console.log(suma);
 
@@ -84,13 +84,30 @@ let meses_array = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
 "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 console.log(meses_array[4], meses_array[10]); 
 
+/*b. Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).*/
+meses_array.sort();
+console.log(meses_array);
 
+/*c. Agregar un elemento al principio y al final del array (utilizar unshift y push).*/
+meses_array.unshift("Mes Magico"); // Agrega un elemento al principio del array
+meses_array.push("Mes Osvlado"); 
 
-/*b. Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).
-c. Agregar un elemento al principio y al final del array (utilizar unshift y push).
-d. Quitar un elemento del principio y del final del array (utilizar shift y pop).
-e. Invertir el orden del array (utilizar reverse).
-f. Unir todos los elementos del array en un único string donde cada mes este
-separado por un guión - (utilizar join).
-g. Crear una copia del array de meses que contenga desde Mayo hasta Noviembre
+/*d. Quitar un elemento del principio y del final del array (utilizar shift y pop).*/
+meses_array.shift(); // Quita el primer elemento del array
+meses_array.pop(); // Quita el ultimo elemento del array
+
+/*e. Invertir el orden del array (utilizar reverse).*/
+meses_array.reverse(); 
+console.log(meses_array);
+
+/*f. Unir todos los elementos del array en un único string donde cada mes este
+separado por un guión - (utilizar join).*/
+meses_array = meses_array.join(" - ");
+console.log(meses_array);
+
+/*g. Crear una copia del array de meses que contenga desde Mayo hasta Noviembre
 (utilizar slice).*/
+let meses_arra2 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+let meses_copia = meses_array2.slice(4, 11); // slice toma los elementos desde el indice 4 hasta el 11 sin incluirlo
+console.log(meses_copia);
