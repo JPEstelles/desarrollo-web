@@ -1,0 +1,96 @@
+/*
+Listado de ejercicios:
+1. Variables y Operadores
+a. Crear dos variables numéricas y utilizar el operador suma para guardar el valor
+de la suma de ambos números en una 3er variable.*/
+let num1 = 50;
+let num2 = 19;
+let suma = num1 + num2;
+console.log(suma);
+
+/*b. Crear dos variables de tipo String y concatenarlas guardando el resultado en una
+3er variable.*/
+let str1 = "Hola, ";
+let str2 = "mundo!";
+let str_final = str1 + str2;
+console.log(str_final);
+
+/*c. Crear dos variables de tipo String y sumar el largo de cada variable (cantidad de
+letras del string) guardando el resultado de la suma en una 3er variable (utilizar
+length).
+*/
+let str3 = "Javascript";
+let str4 = "lenguaje de programación";
+let suma_length = str3.length + str4.length;
+console.log(suma);
+
+/*2. Strings
+a. Crear una variable de tipo string con al menos 10 caracteres y convertir todo el
+texto en mayúscula (utilizar toUpperCase).*/
+
+let str5 = "programacion";
+let str_mayus = str5.toUpperCase();
+console.log(str_mayus);
+
+/*
+b. Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo
+string con los primeros 5 caracteres guardando el resultado en una nueva
+variable (utilizar substring).*/
+let str6 = "programacion";
+let str_substring = str6.substring(0, 5); // Substring te devuelve los caracteres entre los parametros indicados
+console.log(str_substring);
+
+/*c. Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo
+string con los últimos 3 caracteres guardando el resultado en una nueva variable
+(utilizar substring).*/
+let str7 = "programacion";
+let str_substring2 = str7.substring(str7.length - 3); // Le indique la posicion de inicio, si no  indico el final, toma hasta el final del string
+console.log(str_substring2);
+
+/*d. Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo
+string con la primera letra en mayúscula y las demás en minúscula. Guardar el
+resultado en una nueva variable (utilizar substring, toUpperCase, toLowerCase y
+el operador +).*/
+let str8 = "programacion";
+let primera_letra = str8.substring(0, 1).toUpperCase(); // Obtengo la primera letra y la pongo en mayuscula
+let resto_letras = str8.substring(1).toLowerCase(); // Obtengo el resto de las letras y las pongo en minuscula
+let str_final2 = primera_letra + resto_letras; // Concateno 
+
+/*e. Crear una variable de tipo string con al menos 10 caracteres y algún espacio en
+blanco. Encontrar la posición del primer espacio en blanco y guardarla en una
+variable (utilizar indexOf).*/
+let str9 = "programacion web";
+let posicion_espacio = str9.indexOf(" "); // indexOf devuelve la posicion del parametro
+console.log(posicion_espacio);
+
+/*f. Crear una variable de tipo string con al menos 2 palabras largas (10 caracteres y
+algún espacio entre medio). Utilizar los métodos de los ejercicios anteriores para
+generar un nuevo string que tenga la primera letra de ambas palabras en
+mayúscula y las demás letras en minúscula (utilizar indexOf, substring,
+toUpperCase, toLowerCase y el operador +).*/
+let str10 = "programacion estructurada";
+let posicion_espacio2 = str10.indexOf(" ");
+//la posicion del espacio es 12, entonces en el substring voy a tomar desde el 0 hasta el 12 sin incluir el espacio 
+let primera_palabra = str10.substring(0, posicion_espacio2).substring(0,1).toUpperCase() + str10.substring(1, posicion_espacio2).toLowerCase(); 
+let segunda_palabra = str10.substring(posicion_espacio2 + 1).substring(0, 1).toUpperCase() + str10.substring(posicion_espacio2 + 2).toLowerCase();
+let str_final3 = primera_palabra + " " + segunda_palabra;
+console.log(str_final3);
+
+/*3. Arrays
+a. Dado el siguiente array: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+"Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"] mostrar por
+consola los meses 5 y 11 (utilizar console.log).*/
+let meses_array = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+"Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+console.log(meses_array[4], meses_array[10]); 
+
+
+
+/*b. Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).
+c. Agregar un elemento al principio y al final del array (utilizar unshift y push).
+d. Quitar un elemento del principio y del final del array (utilizar shift y pop).
+e. Invertir el orden del array (utilizar reverse).
+f. Unir todos los elementos del array en un único string donde cada mes este
+separado por un guión - (utilizar join).
+g. Crear una copia del array de meses que contenga desde Mayo hasta Noviembre
+(utilizar slice).*/
