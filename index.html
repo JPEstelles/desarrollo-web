@@ -9,51 +9,61 @@
 <header class ="header">
   <nav class="nav" aria-label="Barra pricipal">
     <span class="en-logo">LA NACIÓN</span>
-    <button class="subscribe">SUSCRIBITE</button>
+    <a href="form.html" class="subscribe">SUSCRIBITE</a>
   </nav>
   <nav class="nav-miga" >
-    <a href="#">LA NACION</a> &gt; <a href="#">Tecnología</a>
+    <a >LA NACION</a> &gt; <a>Tecnología</a> <!-- es <a> por si lleva un href a otra seccion aunque no se la añadi-->
   </nav>
 </header>
-
 <body>
-  <div class="container"> 
-  <!-- Título principal de la noticia -->
-  <h1>Cuánto dinero se pierde cada año por el cibercrimen en Estados Unidos</h1>
-  <article>
-    <figure>
-      <!-- Imagen ilustrativa de la noticia -->
-      <img src="https://www.lanacion.com.ar/resizer/v2/en-2024-se-perdieron-mas-de-16600-millones-de-ZK5LYZQHBFCW7PGLPQCMNWE5JU.jpg?auth=fdc3b43955d2392b0a5dd749257ae3e5fdabc3580e9fe7c835bc8d2fec5cdeda&width=880&height=586&quality=70&smart=true" alt="Imagen de Ransomware" width="600" >
-      <!-- Fecha de la noticia -->
-      <figcaption>En 2024 se perdieron más de 16.600 millones de dólares por ataques perpetrados por el cibercrimen, según el FBI</figcaption>
-    </figure>  
-    <!-- Contenido principal de la noticia -->
-    <p>
-      El avance del cibercrimen en Estados Unidos alcanzó niveles históricos en 2024. Así lo reveló el nuevo informe del Centro de Quejas de Delitos en Internet (IC3) del FBI,
-       que reportó pérdidas económicas por más de 16.600 millones de dólares,
-       un aumento del 33% en relación al año anterior. En comparación con 2020, las pérdidas económicas por cibercrimen se cuadruplicaron, con un incremento del 295% desde 2020.
-        Un dato que marca con claridad cómo el impacto financiero del delito digital está creciendo a un ritmo vertiginoso.
-         Y es apenas un ejemplo de lo que sucede a nivel mundial.
-    </p>
-  </article>
+  <div class="container">
+    <!-- Título principal de la noticia -->
+    <h1>Cuánto dinero se pierde cada año por el cibercrimen en Estados Unidos</h1>
+    <main>
+      <article>
+        <figure>
+          <!-- Imagen ilustrativa de la noticia -->
+          <img src="https://www.lanacion.com.ar/resizer/v2/en-2024-se-perdieron-mas-de-16600-millones-de-ZK5LYZQHBFCW7PGLPQCMNWE5JU.jpg?auth=fdc3b43955d2392b0a5dd749257ae3e5fdabc3580e9fe7c835bc8d2fec5cdeda&width=880&height=586&quality=70&smart=true" alt="Imagen de Ransomware" width="600" >
+          <!-- Fecha de la noticia -->
+          <figcaption>En 2024 se perdieron más de 16.600 millones de dólares por ataques perpetrados por el cibercrimen, según el FBI</figcaption>
+        </figure>
+        <!-- Contenido principal de la noticia -->
+        <p>
+          El avance del cibercrimen en Estados Unidos alcanzó niveles históricos en 2024. Así lo reveló el nuevo informe del Centro de Quejas de Delitos en Internet (IC3) del FBI,
+          que reportó pérdidas económicas por más de 16.600 millones de dólares,
+          un aumento del 33% en relación al año anterior. En comparación con 2020, las pérdidas económicas por cibercrimen se cuadruplicaron, con un incremento del 295% desde 2020.
+          Un dato que marca con claridad cómo el impacto financiero del delito digital está creciendo a un ritmo vertiginoso.
+          Y es apenas un ejemplo de lo que sucede a nivel mundial.
+        </p>
+        <!-- Puedes agregar más párrafos o contexto aquí dentro del <main> -->
+        <p>
+          Según el documento, el IC3 recibió 859.532 denuncias durante el último año. Aunque el número total de reportes fue levemente inferior al de 2023, el impacto económico de los ataques fue mucho mayor, con un promedio de 19.372 dólares perdidos por víctima.
+          Desde su creación en el año 2000, el IC3 —que cumple 25 años— recibió más de nueve millones de denuncias de delitos informáticos.
+        </p>
+        <h2>Los delitos que más golpean</h2>
+        <p>
+          El informe destaca que el fraude de inversiones falsas fue el tipo de delito más costoso, que provocó pérdidas por 6570 millones de dólares. Le siguieron las estafas por BEC (Business Email Compromise), con 2770 millones, y las estafas de soporte técnico, con 1464 millones
+        </p>
+        </article>
 
-  <!-- Enlace a un informe oficial del FBI -->
-  <p>
-    Para más información, visita el sitio oficial del <a href="https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf" target="_blank">FBI Internet Crime Report</a>.
-  </p>
+      <!-- Enlace a un informe oficial del FBI -->
+      <p>
+        Para más información, visita el sitio oficial del <a href="https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf" target="_blank">FBI Internet Crime Report</a>.
+      </p>
 
-  <section>
-    <!-- Sección de suscripción al boletín -->
-    <h2>¿Te gustaría recibir más noticias como esta?</h2>
-    <p>Suscríbete a nuestro boletín de noticias y mantente informado sobre las últimas novedades en ciberseguridad.</p>
-    <form id="formularioSuscripcion">
-      <!-- Campo para ingresar el correo electrónico -->
-      <label>Correo electrónico:</label>
-      <input type="email" id="email" name="email" required>
-      <!-- Botón para enviar el formulario -->
-      <button id="botonSuscribirse">Suscribirme</button>
-    </form>
-  </section>
-</div>
+      <section>
+        <!-- Sección de suscripción al boletín -->
+        <h2>¿Te gustaría recibir más noticias como esta?</h2>
+        <p>Suscríbete a nuestro boletín de noticias y mantente informado sobre las últimas novedades en ciberseguridad.</p>
+        <form id="formularioSuscripcion">
+          <!-- Campo para ingresar el correo electrónico -->
+          <label>Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+          <!-- Botón para enviar el formulario -->
+          <button id="botonSuscribirse">Suscribirme</button>
+        </form>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

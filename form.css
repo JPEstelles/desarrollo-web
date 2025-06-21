@@ -1,0 +1,57 @@
+/* Estilo General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  font-family: 'Georgia', serif;
+  background: #fff;
+  padding: 0 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.en-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0056b3;
+}
+/* Header y Footer */
+
+/*header, footer {
+  color: rgb(5, 5, 5);
+  text-align: le;
+  padding: 10px 10px;
+}*/
+main {
+  padding:20px;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.formulario.full-width {
+  width: 100%;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  
+}
+/* Responsive. en celulares las columnas se apilan */
+@media (max-width: 600px) {
+    .form-group {
+        width: 60%;
+    }
+}
