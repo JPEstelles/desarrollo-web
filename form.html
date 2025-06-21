@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Suscripción</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+<header class="header">
+  <nav class="nav" aria-label="Barra principal">
+    <a href="index.html" class="en-logo">LA NACIÓN</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Formulario de Suscripción</h1>
+  <p>Completa tus datos para suscribirte y recibir noticias exclusivas.</p>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Datos personales</legend>
+
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefono">Teléfono (opcional):</label>
+      <input type="tel" id="telefono" name="telefono">
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferencias</legend>
+      <p>¿Qué tipo de noticias deseas recibir?</p>
+      <label><input type="checkbox" name="temas" value="tecnologia"> Tecnología</label>
+      <label><input type="checkbox" name="temas" value="economia"> Economía</label>
+      <label><input type="checkbox" name="temas" value="deportes"> Deportes</label>
+    </fieldset>
+
+    <button type="submit">Enviar Suscripción</button>
+  </form>
+</main>
+</body>
+</html>
