@@ -1,6 +1,6 @@
-
 const formulario = document.getElementById('suscripcion');
 const inputs = formulario.querySelectorAll('input');
+
 
 const validaciones ={
     nombre: value => value.length >= 6 && value.includes(' ') ? '': 'El nombre debe tener al menos 6 caracteres y un espacio',
@@ -13,48 +13,111 @@ const validaciones ={
     ciudad: value => value.length >= 3 ? '' : 'Ciudad inválida.',
     cp: value => value.length >= 3 ? '' : 'Código Postal inválido.',
     dni: value => /^\d{7,8}$/.test(value) ? '' : 'DNI inválido (7 u 8 dígitos).'
+
 };
 
-// Eventos blur y focus para validar campo por campo
-inputs.forEach(input => {
-    input.addEventListener('blur', () => {validateField(input)});
-    input.addEventListener('focus', () => {clearError(input)});
-    });
 
-// validar input individyal
-function validateField(input){
-    const validacion = validaciones[input.name];
-    const errorTexto = validacion ? validacion(input.value) : '';
-    const errorSpan = input.nextElementSibling;// Siguiente hermano del input 
-    errorSpan.textContent = errorTexto;
-    return errorTexto;
+// Validacion de campos individuales
+
+function validateField(input) {
+  const validar = validaciones[input.name];
+  const error = validar ? validar(input.value) : '';
+  const errorSpan = input.nextElementSibling;
+  errorSpan.textContent = error;
+  return error;
 }
-// Limpiar error al enfocar campo
+
 function clearError(input) {
-    const errorSpan = input.nextElementSibling;
-    errorSpan.textContent = '';
+  const errorSpan = input.nextElementSibling;
+  errorSpan.textContent = '';
 }
 
-// Obtener datos del formulario en string
+
+// Obtener datos del formulario como objeto
+
 function getFormData() {
-    let data = '';
-    inputs.forEach(input => {
-        data += `${input.previousElementSibling.textContent} ${input.value}\n`;
-    });
-    return data;
+  const data = {};
+  inputs.forEach(input => {
+    data[input.name] = input.value;
+  });
+  return data;
 }
 
-// Validar todos los campos al enviar
-form.addEventListener('enviar', e => {
-    e.preventDefault();
-    let errors = [];
-    inputs.forEach(input => {
-        const error = validateField(input);
-        if (error) errors.push(error);
-    });
-    if (errors.length === 0) {
-        alert("Formulario enviado con éxito:\n" + getFormData());
-    } else {
-        alert("Errores:\n" + errors.join('\n'));
-    }
+
+// Mostrar modal con mensaje
+
+function mostrarModalConDatos(titulo, datos) {
+  const modalMensaje = document.getElementById('modalMensaje');
+  modalMensaje.innerHTML = `
+    <h3>${titulo}</h3>
+    <pre>${JSON.stringify(datos, null, 2)}</pre>
+  `;
+  document.getElementById('modal').classList.remove('oculto');
+}
+
+
+
+document.getElementById('cerrarModal').addEventListener('click', () => {
+  document.getElementById('modal').classList.add('oculto');
 });
+
+
+// Validar y enviar formulario
+
+formulario.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  let errores = [];
+  inputs.forEach(input => {
+    const error = validateField(input);
+    if (error) errores.push(error);
+  });
+
+  if (errores.length > 0) {
+    mostrarModalConDatos('Errores de validación', { errores });
+    return;
+  }
+
+  const formData = getFormData();
+
+  try {
+    const respuesta = await fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+
+    if (!respuesta.ok)
+      throw new Error(`Error ${respuesta.status}: ${respuesta.statusText}`);
+
+    const data = await respuesta.json();
+
+    // Guardar en LocalStorage
+    localStorage.setItem('formularioData', JSON.stringify(formData));
+
+    mostrarModalConDatos('¡Suscripción Exitosa! 🎉', data);
+  } catch (error) {
+    mostrarModalConDatos('Error en el envío 😢', { mensaje: error.message });
+  }
+});
+
+
+// Cargar datos del LocalStorage al iniciar
+
+window.onload = () => {
+  const datosGuardados = localStorage.getItem('formularioData');
+  if (datosGuardados) {
+    const datos = JSON.parse(datosGuardados);
+    inputs.forEach(input => {
+      if (datos[input.name]) {
+        input.value = datos[input.name];
+      }
+    });
+  }
+
+  // Agregar listeners a cada input
+  inputs.forEach(input => {
+    input.addEventListener('blur', () => validateField(input));
+    input.addEventListener('focus', () => clearError(input));
+  });
+};
