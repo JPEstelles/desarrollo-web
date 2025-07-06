@@ -59,16 +59,23 @@
       <input type="password" name="password" id="password">
       <small class="error"></small>
     </div> 
-      <div class="form-group">
+      <div class="formulario">
       <label>Repetir Contraseña:</label>
       <input type="password" id="repassword" name="repassword">
       <small class="error"></small>
     </div>
     <div class="formulario full-width">
-        <button type="enviar">Enviar</button>
+        <button type="submit">Enviar</button>
     </div>
   </form>
 </main>
+
+<div id="modal" class="modal oculto">
+  <div class="modal-contenido">
+    <span id="cerrarModal" class="cerrar">&times;</span>
+    <div id="modalMensaje"></div>
+  </div>
+</div>
 
 <footer>
   <p>&copy; 2025 Diario La Nación</p>
